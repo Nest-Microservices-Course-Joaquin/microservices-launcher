@@ -72,3 +72,14 @@ services:
       - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
       - SUCCESS_STRIPE_URL=${SUCCESS_STRIPE_URL}
       - CANCEL_STRIPE_URL=${CANCEL_STRIPE_URL}
+
+  auth-ms:
+    build: ./auth-ms
+    ports:
+      - "3004:3004"
+    volumes:
+      - ./auth-ms/src:/usr/src/app/src
+    command: pnpm run start:dev
+    environment:
+      - PORT=3004
+      - NATS_SERVERS=nats://nats-server:4222
