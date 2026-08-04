@@ -24,9 +24,9 @@ spec:
         - name: NATS_SERVERS
           value: "nats://nats:4222"
         - name: SUCCESS_STRIPE_URL
-          value: "http://localhost:3003/payments/success"
+          value: "http://localhost:3000/payments/success"
         - name: CANCEL_STRIPE_URL
-          value: "http://localhost:3003/payments/cancelled"
+          value: "http://localhost:3000/payments/cancelled"
         - name: STRIPE_SECRET_KEY
           valueFrom:
             secretKeyRef:
