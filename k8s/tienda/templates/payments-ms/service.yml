@@ -12,6 +12,6 @@ spec:
     targetPort: 3000
   selector:
     app: payments-ms
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
